@@ -165,7 +165,12 @@
       z-index: 10;
     }
 
-    /* Countdown style adapté à la taille du texte */
+    /* Countdown centré et largeur auto selon texte */
+    .countdown-container {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
     .countdown {
       display: inline-block;
       background-color: #d9d9d9;
@@ -174,7 +179,6 @@
       text-align: center;
       font-weight: 600;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      margin: 2rem auto;
       font-family: "Montserrat", sans-serif;
     }
 
@@ -219,7 +223,9 @@
     </div>
 
     <!-- Countdown sous vidéo -->
-    <div id="countdownTop" class="countdown">Fermeture dans : <span>00j 00h 00m 00s</span></div>
+    <div class="countdown-container">
+      <div id="countdownTop" class="countdown">Fermeture dans : <span>00j 00h 00m 00s</span></div>
+    </div>
 
     <h1>Un programme 100% personnalisé</h1>
     <p>La promesse est simple : tu vas progresser comme tu l'as jamais fait avant. Car tu auras un plan.</p>
@@ -279,7 +285,9 @@
     </div>
 
     <!-- Countdown sous le dernier bouton -->
-    <div id="countdownBottom" class="countdown">Fermeture dans : <span>00j 00h 00m 00s</span></div>
+    <div class="countdown-container">
+      <div id="countdownBottom" class="countdown">Fermeture dans : <span>00j 00h 00m 00s</span></div>
+    </div>
 
   </div>
 
@@ -290,13 +298,12 @@
 
     soundBtn.addEventListener('click', () => {
       if (!soundOn) {
-        iframe.src = iframe.src.replace('mute=1','mute=0'); // Active le son
+        iframe.src = iframe.src.replace('mute=1','mute=0');
         soundOn = true;
         soundBtn.style.display = 'none';
       }
     });
 
-    // Countdown
     function startCountdown(id) {
       const countdownElement = document.getElementById(id).querySelector('span');
       const targetDate = new Date("2025-11-09T23:59:59").getTime();
