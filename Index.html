@@ -8,9 +8,9 @@
   <style>
     body {
       font-family: "Montserrat", sans-serif;
-      font-weight: 600;
-      background-color: #0f0f0f;
-      color: #fff;
+      font-weight: 600; /* Semi Bold par défaut */
+      background-color: #ffffff;
+      color: #000000;
       margin: 0;
       padding: 0;
       line-height: 1.6;
@@ -23,8 +23,8 @@
     }
 
     h1, h2 {
-      font-weight: 800;
-      color: #ffffff;
+      font-weight: 800; /* Extra Bold */
+      color: #000000;
       text-align: center;
       margin-bottom: 1.5rem;
     }
@@ -34,39 +34,34 @@
       margin-bottom: 1.2rem;
     }
 
+    strong {
+      font-weight: 800; /* Extra Bold */
+    }
+
     ul {
       list-style: none;
       padding: 0;
     }
 
     li {
-      background: #1a1a1a;
+      background: #d9d9d9;
       margin: 0.5rem 0;
       padding: 0.8rem 1rem;
       border-radius: 8px;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      font-weight: 600; /* Semi Bold */
     }
 
     li:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
-    }
-
-    .highlight {
-      color: #FFA500;
-      font-weight: 800;
-    }
-
-    strong {
-      font-weight: 800;
-      color: #FFA500;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
     }
 
     .btn {
       display: inline-block;
       padding: 0.9rem 1.8rem;
-      background-color: #FFA500;
+      background-color: #000000;
       color: white;
       font-weight: 800;
       font-size: 1rem;
@@ -74,12 +69,12 @@
       border-radius: 8px;
       text-decoration: none;
       text-align: center;
-      box-shadow: 0 0 12px rgba(255, 165, 0, 0.4);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       transition: all 0.2s ease-in-out;
     }
 
     .btn:hover {
-      box-shadow: 0 0 18px rgba(255, 165, 0, 0.7);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
       transform: translateY(-2px);
     }
 
@@ -97,33 +92,32 @@
       width: 100%;
       max-width: 400px;
       border-radius: 10px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .image-section img:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
     }
 
     .testimonial {
-      background-color: #1a1a1a;
+      background-color: #d9d9d9;
       border-radius: 10px;
       padding: 1rem;
       margin-top: 1.5rem;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .testimonial:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
     }
 
     .testimonial strong {
       display: block;
       margin-bottom: 0.5rem;
-      color: #FFA500;
       font-weight: 800;
     }
 
@@ -131,7 +125,7 @@
       font-family: "Montserrat", sans-serif;
       font-weight: 500; /* Medium */
       font-style: italic;
-      color: #ffffff;
+      color: #000000;
       margin: 0;
     }
 
@@ -154,7 +148,7 @@
   <div class="container">
     <h1>Un programme 100% personnalisé</h1>
     <p>La promesse est simple : tu vas progresser comme tu l'as jamais fait avant. Car tu auras un plan.</p>
-    <p>Les chiffres parlent : avec un plan structuré et adapté tu as jusqu’à <span class="highlight">10 fois plus</span> de chance d’atteindre ton objectif. Des études montrent même que suivre un processus étape par étape rend les gens <span class="highlight">77 % plus susceptibles</span> de réussir.</p>
+    <p>Les chiffres parlent : avec un plan structuré et adapté tu as jusqu’à <strong>10 fois plus</strong> de chance d’atteindre ton objectif. Des études montrent même que suivre un processus étape par étape rend les gens <strong>77 % plus susceptibles</strong> de réussir.</p>
 
     <div class="button-container">
       <a href="https://exeatan.gumroad.com/l/1001prog?wanted=true" class="btn">Je prends mon programme</a>
