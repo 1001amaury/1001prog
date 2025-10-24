@@ -165,15 +165,16 @@
       z-index: 10;
     }
 
-    /* Countdown style */
+    /* Countdown style adapté à la taille du texte */
     .countdown {
+      display: inline-block;
       background-color: #d9d9d9;
       border-radius: 8px;
-      padding: 1rem;
+      padding: 0.8rem 1.2rem;
       text-align: center;
       font-weight: 600;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      margin: 2rem 0;
+      margin: 2rem auto;
       font-family: "Montserrat", sans-serif;
     }
 
@@ -291,7 +292,7 @@
       if (!soundOn) {
         iframe.src = iframe.src.replace('mute=1','mute=0'); // Active le son
         soundOn = true;
-        soundBtn.style.display = 'none'; // On peut cacher le bouton après activation
+        soundBtn.style.display = 'none';
       }
     });
 
