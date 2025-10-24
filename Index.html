@@ -130,6 +130,22 @@
       margin: 0;
     }
 
+    /* Vidéo responsive */
+    .video-section {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 ratio */
+      height: 0;
+      margin-bottom: 2rem;
+    }
+
+    .video-section iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
     @media (max-width: 768px) {
       .container {
         padding: 1.2rem;
@@ -142,19 +158,20 @@
       p, li {
         font-size: 0.95rem;
       }
-
-      iframe {
-        width: 100%;
-        height: auto;
-      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Vidéo embed au début -->
-    <div class="video-section" style="text-align:center; margin-bottom:2rem;">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/uUwiqxAMxI4" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+    <!-- Vidéo embed responsive autoplay -->
+    <div class="video-section">
+      <iframe 
+        src="https://www.youtube.com/embed/uUwiqxAMxI4?autoplay=1&mute=1" 
+        title="YouTube video" 
+        frameborder="0" 
+        allow="autoplay; encrypted-media" 
+        allowfullscreen>
+      </iframe>
     </div>
 
     <h1>Un programme 100% personnalisé</h1>
@@ -183,7 +200,7 @@
     <ul>
       <li>1. Ton programme personnalisé</li>
       <li>2. Un pack mindset & discipline (3 vidéos) pour te motiver et t’aider à améliorer ta perspective sur ce que tu fais.</li>
-      <li>3. Une vidéo pédagogique qui t’explique les grands principes de l’entraînement ainsi que les mouvements fondamentaux pour que tu puisses progresser seul par la suite.</li>
+      <li>3. Une vidéo pédagogique qui t’explique les grands principes de l'entraînement ainsi que les mouvements fondamentaux pour que tu puisses progresser seul par la suite.</li>
     </ul>
 
     <p><strong>Option Premium :</strong> un appel individuel (+1h) où je construis ton programme en direct, je détaille chaque choix et je réponds à toutes tes questions.</p>
