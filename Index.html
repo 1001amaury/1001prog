@@ -165,6 +165,22 @@
       z-index: 10;
     }
 
+    /* Countdown style */
+    .countdown {
+      background-color: #d9d9d9;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      margin: 2rem 0;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .countdown span {
+      font-weight: 600;
+    }
+
     @media (max-width: 768px) {
       .container {
         padding: 1.2rem;
@@ -201,6 +217,9 @@
       <button id="soundBtn">🔊</button>
     </div>
 
+    <!-- Countdown sous vidéo -->
+    <div id="countdownTop" class="countdown">Fermeture dans : <span>00j 00h 00m 00s</span></div>
+
     <h1>Un programme 100% personnalisé</h1>
     <p>La promesse est simple : tu vas progresser comme tu l'as jamais fait avant. Car tu auras un plan.</p>
     <p>Les chiffres parlent : avec un plan structuré et adapté tu as jusqu’à <strong>10 fois plus</strong> de chance d’atteindre ton objectif. Des études montrent même que suivre un processus étape par étape rend les gens <strong>77 % plus susceptibles</strong> de réussir.</p>
@@ -218,6 +237,11 @@
     </ul>
 
     <p><strong>Option premium :</strong> tu construis ton plan directement avec moi en appel, tu comprends chaque détail du programme et tu repars avec zéro question en suspens.</p>
+
+    <!-- Séparateur -->
+    <div style="margin: 2rem 0;">
+      <hr style="border: 0; height: 2px; background-color: #000000; width: 100%;">
+    </div>
 
     <h2>Inclus dans le programme :</h2>
     <ul>
@@ -252,6 +276,10 @@
     <div class="button-container">
       <a href="https://exeatan.gumroad.com/l/1001prog?wanted=true" class="btn">Je prends mon programme</a>
     </div>
+
+    <!-- Countdown sous le dernier bouton -->
+    <div id="countdownBottom" class="countdown">Fermeture dans : <span>00j 00h 00m 00s</span></div>
+
   </div>
 
   <script>
@@ -266,6 +294,40 @@
         soundBtn.style.display = 'none'; // On peut cacher le bouton après activation
       }
     });
+
+    // Countdown
+    function startCountdown(id) {
+      const countdownElement = document.getElementById(id).querySelector('span');
+      const targetDate = new Date("2025-11-09T23:59:59").getTime();
+
+      function updateTimer() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance < 0) {
+          countdownElement.innerHTML = "00j 00h 00m 00s";
+          clearInterval(interval);
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        countdownElement.innerHTML = 
+          `${String(days).padStart(2,'0')}j ` +
+          `${String(hours).padStart(2,'0')}h ` +
+          `${String(minutes).padStart(2,'0')}m ` +
+          `${String(seconds).padStart(2,'0')}s`;
+      }
+
+      updateTimer();
+      const interval = setInterval(updateTimer, 1000);
+    }
+
+    startCountdown('countdownTop');
+    startCountdown('countdownBottom');
   </script>
 </body>
 </html>
