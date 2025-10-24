@@ -9,7 +9,7 @@
   <style>
     body {
       font-family: "Montserrat", sans-serif;
-      font-weight: 600; /* Semi Bold par défaut */
+      font-weight: 600;
       background-color: #ffffff;
       color: #000000;
       margin: 0;
@@ -24,7 +24,7 @@
     }
 
     h1, h2 {
-      font-weight: 800; /* Extra Bold */
+      font-weight: 800;
       color: #000000;
       text-align: center;
       margin-bottom: 1.5rem;
@@ -36,7 +36,7 @@
     }
 
     strong {
-      font-weight: 800; /* Extra Bold */
+      font-weight: 800;
     }
 
     ul {
@@ -51,7 +51,7 @@
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
-      font-weight: 600; /* Semi Bold */
+      font-weight: 600;
     }
 
     li:hover {
@@ -124,7 +124,7 @@
 
     .testimonial p {
       font-family: "Montserrat", sans-serif;
-      font-weight: 500; /* Medium */
+      font-weight: 500;
       font-style: italic;
       color: #000000;
       margin: 0;
@@ -146,6 +146,25 @@
       height: 100%;
     }
 
+    /* Bouton minimaliste pour le son */
+    #soundBtn {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(0,0,0,0.6);
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
     @media (max-width: 768px) {
       .container {
         padding: 1.2rem;
@@ -158,20 +177,28 @@
       p, li {
         font-size: 0.95rem;
       }
+
+      #soundBtn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Vidéo embed responsive autoplay -->
+    <!-- Vidéo embed responsive autoplay muette -->
     <div class="video-section">
       <iframe 
+        id="ytVideo"
         src="https://www.youtube.com/embed/uUwiqxAMxI4?autoplay=1&mute=1" 
         title="YouTube video" 
         frameborder="0" 
         allow="autoplay; encrypted-media" 
         allowfullscreen>
       </iframe>
+      <button id="soundBtn">🔊</button>
     </div>
 
     <h1>Un programme 100% personnalisé</h1>
@@ -230,5 +257,19 @@
       <a href="https://exeatan.gumroad.com/l/1001prog?wanted=true" class="btn">Je prends mon programme</a>
     </div>
   </div>
+
+  <script>
+    const soundBtn = document.getElementById('soundBtn');
+    const iframe = document.getElementById('ytVideo');
+    let soundOn = false;
+
+    soundBtn.addEventListener('click', () => {
+      if (!soundOn) {
+        iframe.src = iframe.src.replace('mute=1','mute=0'); // Active le son
+        soundOn = true;
+        soundBtn.style.display = 'none'; // On peut cacher le bouton après activation
+      }
+    });
+  </script>
 </body>
 </html>
