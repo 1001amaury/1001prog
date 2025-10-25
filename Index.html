@@ -79,7 +79,6 @@
       transform: translateY(-2px);
     }
 
-    /* Nouveau style pour le dernier bouton plus gros */
     .btn-large {
       font-size: 1.3rem;
       padding: 1.2rem 2.4rem;
@@ -136,10 +135,9 @@
       margin: 0;
     }
 
-    /* Vidéo responsive */
     .video-section {
       position: relative;
-      padding-bottom: 56.25%; /* 16:9 ratio */
+      padding-bottom: 56.25%;
       height: 0;
       margin-bottom: 2rem;
     }
@@ -152,7 +150,6 @@
       height: 100%;
     }
 
-    /* Bouton minimaliste pour le son */
     #soundBtn {
       position: absolute;
       bottom: 10px;
@@ -171,7 +168,6 @@
       z-index: 10;
     }
 
-    /* Countdown centré et largeur auto selon texte */
     .countdown-container {
       text-align: center;
       margin: 2rem 0;
@@ -186,6 +182,13 @@
       font-weight: 600;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       font-family: "Montserrat", sans-serif;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .countdown:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
     }
 
     .countdown span {
@@ -220,7 +223,7 @@
 </head>
 <body>
   <div class="container">
-    <!-- Vidéo embed responsive autoplay muette -->
+
     <div class="video-section">
       <iframe 
         id="ytVideo"
@@ -233,80 +236,103 @@
       <button id="soundBtn">🔊</button>
     </div>
 
-    <!-- Countdown sous vidéo -->
     <div class="countdown-container">
-      <div id="countdownTop" class="countdown">Fermeture dans : <span>00j 00h 00m 00s</span></div>
+      <div id="countdownTop" class="countdown">Fermeture des candidatures dans : <span>00j 00h 00m 00s</span></div>
     </div>
 
-    <h1>Un programme 100% personnalisé</h1>
-    <p>La promesse est simple : tu vas progresser comme tu l'as jamais fait avant. Car tu auras un plan.</p>
-    <p>Les chiffres parlent : avec un plan structuré et adapté tu as jusqu’à <strong>10 fois plus</strong> de chance d’atteindre ton objectif. Des études montrent même que suivre un processus étape par étape rend les gens <strong>77 % plus susceptibles</strong> de réussir.</p>
+    <h1>Ton corps n’évolue pas parce que tu n’as pas de plan.</h1>
+    <p>Tu t’entraînes, tu te donnes, mais rien ne change vraiment. T’as déjà eu la sensation de bosser pour rien ? De douter de toi ? (alors que t’as juste pas la bonne structure) </p>
+    <p><strong>1001prog</strong> met fin à ça.  
+    Je construis ton plan sur mesure, pour que chaque séance te rapproche vraiment de tes objectifs. Tu sauras quoi faire, pourquoi tu le fais, et comment progresser — sans te blesser ni stagner.
+    
+    <p>Les chiffres parlent : avec un plan structuré et adapté tu as jusqu’à <strong>10 fois</strong> plus de chance d’atteindre ton objectif.</p>
 
     <div class="button-container">
-      <a href="https://exeatan.gumroad.com/l/1001prog?wanted=true" class="btn">Je prends mon programme</a>
+      <a href="https://exeatan.gumroad.com/l/1001prog?wanted=true" class="btn">Je veux mon plan</a>
     </div>
 
-    <h2>Ce que tu gagnes avec le programme :</h2>
+    <h2>Ce que tu obtiens :</h2>
     <ul>
-      <li>1. Tu sais exactement quoi faire à chaque séance, sans doutes ni perte de temps.</li>
-      <li>2. Tu restes discipliné même quand la motivation disparaît, parce que tu as un système qui t’empêche de lâcher.</li>
-      <li>3. Tu progresses plus vite grâce à une technique propre, sans blessures inutiles. Tu ne feras pas les erreurs classiques : je les ai fait moi même donc je peux te les éviter. </li>
-      <li>4. Tu comprends enfin comment t’entraîner intelligemment, et tu deviens autonome pour (toute) ta vie sportive.</li>
+      <li>Fini les séances au hasard — chaque exo a un sens et une logique.</li>
+      <li>Quand la motivation disparaît, le système que je t'ai donné prend le relais.</li>
+      <li>Tu kiffes tes entraînements, ton corps répond enfin. Tu as enfin ces résultats</li>
+      <li>Tu comprends comment t’entraîner intelligemment. T’es autonome à vie.</li>
     </ul>
 
-    <p><strong>Option premium :</strong> tu construis ton plan directement avec moi en appel, tu comprends chaque détail du programme et tu repars avec zéro question en suspens.</p>
+    <p><strong>Option premium :</strong> on fait ton plan ensemble, en appel. Tu vois chaque choix en direct, et tu repars sans la moindre zone floue.</p>
 
-    <!-- Séparateur -->
     <div style="margin: 2rem 0;">
       <hr style="border: 0; height: 2px; background-color: #000000; width: 100%;">
     </div>
 
-    <h2>Inclus dans le programme :</h2>
+    <h2>Concrètement, le programme inclut :</h2>
     <ul>
-      <li>1. Ton programme personnalisé</li>
-      <li>2. Un pack de 3 vidéos (exécutions/conseils/mindset) t'aider à tirer le maximum de ton programme.</li>
-      <li>3. L'accès à vie à ma communauté privée 1001Lab (conférences/suivis/event/promo/exclus...) </li>
+      <li>Ton programme 100% personnalisé.</li>
+      <li>3 vidéos clés : exécutions, application & mindset</li>
+      <li>L’accès à vie à <strong>1001Lab</strong> — ma communauté privée : conférences, events, promos, suivis exclusifs.</li>
     </ul>
 
-    <p><strong>Option Premium :</strong> un appel individuel (+1h) où je construis ton programme en direct, je détaille chaque choix et je réponds à toutes tes questions.</p>
+    <p><strong>Option Premium :</strong> un appel individuel (+1h) où je construis ton plan devant toi et t’explique tout ce qui compte pour progresser sans plateau.</p>
+    
+    <div style="margin: 2rem 0;">
+      <hr style="border: 0; height: 2px; background-color: #000000; width: 100%;">
+    </div>
+    
 
-    <h2>Ils ont testés :</h2>
+    <h2>Pourquoi j’ai créé 1001prog :</h2>
+    <p>J’ai passé des années à m’entraîner dans le flou. Je pensais que la discipline suffisait. Faux.  
+    Ce qui change tout, <strong>c’est le plan.</strong>  
+    Quand j’ai enfin structuré le mien, ma progression <strong>a explosé</strong> . Aujourd’hui, je te fais gagner ce temps-là.</p>
+    
+    
+    <div style="margin: 2rem 0;">
+      <hr style="border: 0; height: 2px; background-color: #000000; width: 100%;">
+    </div>
+
+    <h2>Résultats réels :</h2>
     <div class="image-section">
       <img src="IMG_0157.jpeg" alt="Transformation physique">
-      <p><em>Transfo en trois mois de programme.</em></p>
+      <p><em>3 mois. Même personne, mais mental et physique différent.</em></p>
     </div>
 
     <div class="testimonial">
       <strong>Liam :</strong>
-      <p>“En deux mois je suis passé d’un muscle up qui passe 1x/2 à des séries de 4 de suite, ma ligne sur le handstand s’est améliorée direct grâce au call et à la lecture du guide handstand, les hspu j’arrivais même pas à faire une negative maintenant je fais des mini hspu. Franchement tu m’as épaté, j’en reprendrais un quand j’aurais atteint tout mes objectifs pour partir sur des nouveaux !”</p>
+      <p>“En deux mois je suis passé d’un muscle up qui passe 1x/2 à des séries de 4.  
+      Ma ligne sur le handstand s’est améliorée direct. Maintenant je fais des mini HSPU.  
+      Franchement tu m’as épaté, j’en reprendrai un quand j’aurai fini mes objectifs.”</p>
     </div>
 
     <div class="testimonial">
       <strong>Théo :</strong>
-      <p>“Programme super quali et détaillé. Réponds parfaitement à mes attentes et super efficace, résultats garantis !”</p>
+      <p>“Programme super quali. Répond parfaitement à mes attentes, résultats rapides.  
+      Franchement, c’est carré du début à la fin.”</p>
     </div>
 
     <div class="testimonial">
       <strong>Lucas :</strong>
-      <p>“J'ai adoré ce programme ! Il est extrêmement bien conçu, clair et progressif. Ce qui m'a particulièrement plu, c'est l'écoute et la prise en compte de mes besoins : les séances sont personnalisées, adaptées à mes objectifs. On sent un vrai effort derrière, je recommande à 100% !”</p>
+      <p>“Ce que j’ai préféré, c’est que tout est vraiment adapté à moi.  
+      Chaque séance avait du sens, j’ai progressé sans me poser de questions.  
+      Je recommande à 100 %.”</p>
     </div>
 
     <div class="button-container">
+      <p><strong>Le programme ferme bientôt.</strong><br>Tu peux continuer à improviser... ou enfin suivre un plan qui marche.</p>
       <a href="https://exeatan.gumroad.com/l/1001prog?wanted=true" class="btn btn-large">Je prends mon programme</a>
     </div>
 
-    <!-- Countdown sous le dernier bouton -->
     <div class="countdown-container">
-      <div id="countdownBottom" class="countdown">Fermeture dans : <span>00j 00h 00m 00s</span></div>
+      <div id="countdownBottom" class="countdown">Fermeture des candidatures dans : <span>00j 00h 00m 00s</span></div>
     </div>
 
   </div>
 
   <script>
+    const gumroadLink = "https://exeatan.gumroad.com/l/1001prog?wanted=true";
+
+    // Bouton son
     const soundBtn = document.getElementById('soundBtn');
     const iframe = document.getElementById('ytVideo');
     let soundOn = false;
-
     soundBtn.addEventListener('click', () => {
       if (!soundOn) {
         iframe.src = iframe.src.replace('mute=1','mute=0');
@@ -315,6 +341,15 @@
       }
     });
 
+    // Countdown cliquables
+    document.getElementById('countdownTop').addEventListener('click', () => {
+      window.location.href = gumroadLink;
+    });
+    document.getElementById('countdownBottom').addEventListener('click', () => {
+      window.location.href = gumroadLink;
+    });
+
+    // Fonction de countdown
     function startCountdown(id) {
       const countdownElement = document.getElementById(id).querySelector('span');
       const targetDate = new Date("2025-11-09T23:59:59").getTime();
