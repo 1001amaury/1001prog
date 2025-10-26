@@ -99,11 +99,11 @@
 
     .btn {
       display: inline-block;
-      padding: 1rem 2rem;
+      padding: 0.9rem 1.8rem;
       background-color: #000000;
-      color: #ffffff;
+      color: white;
       font-weight: 800;
-      font-size: 1.2rem;
+      font-size: 1rem;
       border: none;
       border-radius: 8px;
       text-decoration: none;
@@ -165,10 +165,20 @@
       background-color: #000000;
       margin: 2rem 0;
     }
+
+    .link-normal {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.95rem;
+    }
+    .link-normal a {
+      text-decoration: underline;
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
-  <!-- Barre du haut -->
+  <!-- Barre du haut identique à la page Normal -->
   <div class="top-bar">
     <a href="index.html" class="logo">100<span class="reversed">1</span> PROG</a>
     <div class="links">
@@ -217,6 +227,11 @@
     <!-- Bouton final CTA -->
     <div class="button-container">
       <a href="https://exeatan.gumroad.com/l/1001progpremium?wanted=true" class="btn btn-large">Je veux passer au Premium maintenant</a>
+    </div>
+
+    <!-- Lien discret vers l’offre Normal -->
+    <div class="link-normal">
+      <p>Tu hésites encore ? <a href="index.html">Voir l’offre Normal</a></p>
     </div>
   </div>
 </body>
