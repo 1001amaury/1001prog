@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1001prog</title>
+  <title>1001prog Premium</title>
   <link rel="icon" type="image/jpeg" href="favicon.jpeg">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800&display=swap" rel="stylesheet">
   <style>
@@ -101,7 +101,7 @@
       display: inline-block;
       padding: 0.9rem 1.8rem;
       background-color: #000000;
-      color: white;
+      color: #ffffff;
       font-weight: 800;
       font-size: 1rem;
       border: none;
@@ -166,19 +166,44 @@
       margin: 2rem 0;
     }
 
-    .link-normal {
+    .premium-bottom {
       text-align: center;
-      margin-top: 2rem;
-      font-size: 0.95rem;
+      margin: 2rem 0;
+      font-weight: 500;
     }
-    .link-normal a {
+
+    .premium-bottom a {
       text-decoration: underline;
+      color: #000000;
       font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .top-bar .logo {
+        font-size: 2.4rem;
+        min-width: auto;
+      }
+      .top-bar .links {
+        font-size: 1rem;
+      }
+      .container {
+        padding: 1.2rem;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      p {
+        font-size: 0.95rem;
+      }
+      .btn-large {
+        font-size: 1.1rem;
+        padding: 1rem 2rem;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Barre du haut identique à la page Normal -->
+  <!-- Barre du haut -->
   <div class="top-bar">
     <a href="index.html" class="logo">100<span class="reversed">1</span> PROG</a>
     <div class="links">
@@ -194,7 +219,7 @@
     <p>Avec <strong>1001prog Premium</strong>, tu as tout : ton programme de sport 100% personnalisé, 3 vidéos clés pour l’exécution, l’application et le mindset… mais surtout, <strong>on construit ton plan ensemble</strong> en appel privé (+1h). Chaque exo, chaque choix : tu comprends tout, et tu repars avec une vision claire et un système qui marche.</p>
     
     <div class="button-container">
-      <a href="https://exeatan.gumroad.com/l/1001progpremium?wanted=true" class="btn btn-large">Je prends mon Premium — 59,99€</a>
+      <a href="https://exeatan.gumroad.com/l/1001progpremium?wanted=true" class="btn">Je prends mon Premium — 59,99€</a>
     </div>
 
     <h2>Ce que tu obtiens :</h2>
@@ -224,14 +249,8 @@
       Le prog est grave complet merci mec ! J’ai hâte de commencer.”</p>
     </div>
 
-    <!-- Bouton final CTA -->
-    <div class="button-container">
-      <a href="https://exeatan.gumroad.com/l/1001progpremium?wanted=true" class="btn btn-large">Je veux passer au Premium maintenant</a>
-    </div>
-
-    <!-- Lien discret vers l’offre Normal -->
-    <div class="link-normal">
-      <p>Tu hésites encore ? <a href="index.html">Voir l’offre Normal</a></p>
+    <div class="premium-bottom">
+      <p>Tu préfères un premier pas plus simple ? <a href="index.html">Voir l'offre Normal</a></p>
     </div>
   </div>
 </body>
