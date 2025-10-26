@@ -17,6 +17,47 @@
       line-height: 1.6;
     }
 
+    /* Barre du haut */
+    .top-bar {
+      background-color: #ffffff;
+      color: #000000;
+      text-align: center;
+      padding: 0.6rem 1rem;
+      font-family: "Montserrat", sans-serif;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .top-bar .logo {
+      font-weight: 800;
+      font-size: 3rem;
+      margin-bottom: 0.25rem; /* petit espace contrôlé */
+      display: inline-block;
+      min-width: 300px;
+      line-height: 1;
+    }
+
+    .reversed {
+      display: inline-block;
+      transform: scaleX(-1);
+    }
+
+    .top-bar .links {
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-top: 0;
+    }
+
+    .top-bar .links a {
+      color: #000000;
+      text-decoration: none;
+      margin: 0 1rem;
+      transition: opacity 0.2s ease;
+    }
+
+    .top-bar .links a:hover {
+      opacity: 0.6;
+    }
+
     .container {
       max-width: 900px;
       margin: auto;
@@ -196,24 +237,27 @@
     }
 
     @media (max-width: 768px) {
+      .top-bar .logo {
+        font-size: 2.4rem;
+        min-width: auto;
+      }
+      .top-bar .links {
+        font-size: 1rem;
+      }
       .container {
         padding: 1.2rem;
       }
-
       h1 {
         font-size: 1.6rem;
       }
-
       p, li {
         font-size: 0.95rem;
       }
-
       #soundBtn {
         width: 35px;
         height: 35px;
         font-size: 1rem;
       }
-
       .btn-large {
         font-size: 1.1rem;
         padding: 1rem 2rem;
@@ -222,6 +266,14 @@
   </style>
 </head>
 <body>
+  <div class="top-bar">
+    <div class="logo">100<span class="reversed">1</span> PROG</div>
+    <div class="links">
+      <a href="index.html">NORMAL</a>
+      <a href="premium.html">PREMIUM</a>
+    </div>
+  </div>
+
   <div class="container">
 
     <div class="video-section">
@@ -243,7 +295,7 @@
     <h1>Ton corps n’évolue pas parce que tu n’as pas de plan.</h1>
     <p>Tu t’entraînes, tu te donnes, mais rien ne change vraiment. T’as déjà eu la sensation de bosser pour rien ? De douter de toi ? (alors que t’as juste pas la bonne structure) </p>
     <p><strong>1001prog</strong> met fin à ça.  
-    Je construis ton plan sur mesure, pour que chaque séance te rapproche vraiment de tes objectifs. Tu sauras quoi faire, pourquoi tu le fais, et comment progresser — sans te blesser ni stagner.
+    Je construis ton plan sur mesure, pour que chaque séance te rapproche vraiment de tes objectifs. Tu sauras quoi faire, pourquoi tu le fais, et comment progresser — sans te blesser ni stagner.</p>
     
     <p>Les chiffres parlent : avec un plan structuré et adapté tu as jusqu’à <strong>10 fois</strong> plus de chance d’atteindre ton objectif.</p>
 
@@ -278,27 +330,25 @@
       <hr style="border: 0; height: 2px; background-color: #000000; width: 100%;">
     </div>
     
-
     <h2>Pourquoi j’ai créé 1001prog :</h2>
     <p>J’ai passé des années à m’entraîner dans le flou. Je pensais que la discipline suffisait. Faux.  
     Ce qui change tout, <strong>c’est le plan.</strong>  
-    Quand j’ai enfin structuré le mien, ma progression <strong>a explosé</strong> . Aujourd’hui, je te fais gagner ce temps-là.</p>
-    
+    Quand j’ai enfin structuré le mien, ma progression <strong>a explosé</strong>. Aujourd’hui, je te fais gagner ce temps-là.</p>
     
     <div style="margin: 2rem 0;">
       <hr style="border: 0; height: 2px; background-color: #000000; width: 100%;">
     </div>
 
-   <h2>Résultats réels :</h2>
+    <h2>Résultats réels :</h2>
 
-<div class="image-section">
-  <img src="temoignage de bz.jpeg" alt="Témoignage BZ">
-</div>
+    <div class="image-section">
+      <img src="temoignage de bz.jpeg" alt="Témoignage BZ">
+    </div>
 
-<div class="image-section">
-  <img src="IMG_0157.jpeg" alt="Transformation physique">
-  <p><em>3 mois. Même personne, mais mental et physique différent.</em></p>
-</div>
+    <div class="image-section">
+      <img src="IMG_0157.jpeg" alt="Transformation physique">
+      <p><em>3 mois. Même personne, mais mental et physique différent.</em></p>
+    </div>
 
     <div class="testimonial">
       <strong>Liam :</strong>
