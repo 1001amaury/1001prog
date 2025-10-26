@@ -196,41 +196,11 @@
       justify-content: center;
       margin: 1.5rem auto;
       position: relative;
-      max-width: 700px; /* limite largeur PC */
+      max-width: 700px;
     }
 
-    .video-wrapper {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%; /* ratio 16:9 */
-      height: 0;
-    }
-
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+    .video-section iframe {
       border-radius: 12px;
-    }
-
-    #soundBtn {
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
-      background: rgba(0,0,0,0.6);
-      border: none;
-      color: white;
-      font-size: 1.2rem;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 10;
     }
 
     .countdown-container {
@@ -283,11 +253,6 @@
       p, li {
         font-size: 0.95rem;
       }
-      #soundBtn {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
-      }
       .btn-large {
         font-size: 1.1rem;
         padding: 1rem 2rem;
@@ -307,19 +272,18 @@
     </div>
   </div>
 
-  <!-- Vidéo YouTube responsive -->
+  <!-- Vidéo Vimeo responsive -->
   <div class="video-section">
-    <div class="video-wrapper">
-      <iframe 
-        id="ytVideo"
-        src="https://www.youtube.com/watch?v=uUwiqxAMxI4" 
-        title="YouTube video" 
+    <div style="padding:56.25% 0 0 0;position:relative;width:100%;">
+      <iframe src="https://player.vimeo.com/video/1130657741?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&playsinline=1" 
         frameborder="0" 
-        allow="autoplay; encrypted-media" 
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+        style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+        title="vsl v1" 
         allowfullscreen>
       </iframe>
     </div>
-    <button id="soundBtn">🔊</button>
+    <script src="https://player.vimeo.com/api/player.js"></script>
   </div>
 
   <div class="container">
@@ -425,18 +389,6 @@
 
   <script>
     const gumroadLink = "https://exeatan.gumroad.com/l/1001prog?wanted=true";
-
-    // Bouton son
-    const soundBtn = document.getElementById('soundBtn');
-    const iframe = document.getElementById('ytVideo');
-    let soundOn = false;
-    soundBtn.addEventListener('click', () => {
-      if (!soundOn) {
-        iframe.src = iframe.src.replace('mute=1','mute=0');
-        soundOn = true;
-        soundBtn.style.display = 'none';
-      }
-    });
 
     // Countdown cliquables
     document.getElementById('countdownTop').addEventListener('click', () => {
