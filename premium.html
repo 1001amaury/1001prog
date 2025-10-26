@@ -178,6 +178,22 @@
       font-weight: 600;
     }
 
+    /* Bloc vidéo */
+    .video-section {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      margin-bottom: 2rem;
+    }
+
+    .video-section iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
     @media (max-width: 768px) {
       .top-bar .logo {
         font-size: 2.4rem;
@@ -212,6 +228,17 @@
     </div>
   </div>
 
+  <!-- Vidéo (comme sur Normal) -->
+  <div class="video-section">
+    <iframe 
+      src="https://www.youtube.com/embed/uUwiqxAMxI4?autoplay=1&mute=1" 
+      title="YouTube video"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  </div>
+
   <!-- Contenu -->
   <div class="container">
     <h1>1001prog Premium</h1>
@@ -219,7 +246,7 @@
     <p>Avec <strong>1001prog Premium</strong>, tu as tout : ton programme de sport 100% personnalisé, 3 vidéos clés pour l’exécution, l’application et le mindset… mais surtout, <strong>on construit ton plan ensemble</strong> en appel privé (+1h). Chaque exo, chaque choix : tu comprends tout, et tu repars avec une vision claire et un système qui marche.</p>
     
     <div class="button-container">
-      <a href="https://exeatan.gumroad.com/l/1001progpremium?wanted=true" class="btn">Je prends mon Premium — 59,99€</a>
+      <a href="https://exeatan.gumroad.com/l/1001progpremium?wanted=true" class="btn btn-large">Je prends mon Premium — 59,99€</a>
     </div>
 
     <h2>Ce que tu obtiens :</h2>
@@ -250,7 +277,7 @@
     </div>
 
     <div class="premium-bottom">
-      <p>Tu hésites encore ? <a href="index.html">Voir l'offre Normal</a></p>
+      <p>Tu préfères un premier pas plus simple ? <a href="index.html">Voir l'offre Normal</a></p>
     </div>
   </div>
 </body>
