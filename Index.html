@@ -17,55 +17,6 @@
       line-height: 1.6;
     }
 
-    /* Barre du haut */
-    .top-bar {
-      background-color: #ffffff;
-      color: #000000;
-      text-align: center;
-      padding: 0.6rem 1rem;
-      font-family: "Montserrat", sans-serif;
-      border-bottom: 1px solid #e0e0e0;
-    }
-
-    .top-bar .logo {
-      font-weight: 800;
-      font-size: 3rem;
-      margin-bottom: 0.25rem;
-      display: inline-block;
-      min-width: 300px;
-      line-height: 1;
-      text-decoration: none;
-      color: #000000;
-    }
-
-    .reversed {
-      display: inline-block;
-      transform: scaleX(-1);
-    }
-
-    .top-bar .links {
-      font-weight: 600;
-      font-size: 1.2rem;
-      margin-top: 0;
-    }
-
-    .top-bar .links a {
-      color: #000000;
-      text-decoration: none;
-      margin: 0 1rem;
-      transition: opacity 0.2s ease;
-    }
-
-    .top-bar .links a:hover,
-    .top-bar .logo:hover {
-      opacity: 0.6;
-    }
-
-    .top-bar .links a.active {
-      text-decoration: underline;
-      font-weight: 700;
-    }
-
     .container {
       max-width: 900px;
       margin: auto;
@@ -88,20 +39,31 @@
       font-weight: 800;
     }
 
-    a {
-      color: #000000;
-      text-decoration: none;
+    ul {
+      list-style: none;
+      padding: 0;
     }
 
-    a:hover {
-      opacity: 0.7;
+    li {
+      background: #d9d9d9;
+      margin: 0.5rem 0;
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      font-weight: 600;
+    }
+
+    li:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
     }
 
     .btn {
       display: inline-block;
       padding: 0.9rem 1.8rem;
       background-color: #000000;
-      color: #ffffff;
+      color: white;
       font-weight: 800;
       font-size: 1rem;
       border: none;
@@ -137,6 +99,12 @@
       max-width: 400px;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .image-section img:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
     }
 
     .testimonial {
@@ -145,6 +113,12 @@
       padding: 1rem;
       margin-top: 1.5rem;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .testimonial:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
     }
 
     .testimonial strong {
@@ -154,8 +128,10 @@
     }
 
     .testimonial p {
-      font-style: italic;
+      font-family: "Montserrat", sans-serif;
       font-weight: 500;
+      font-style: italic;
+      color: #000000;
       margin: 0;
     }
 
@@ -201,61 +177,43 @@
       display: inline-block;
       background-color: #d9d9d9;
       border-radius: 8px;
-      padding: 0.6rem 1rem;
+      padding: 0.8rem 1.2rem;
       text-align: center;
       font-weight: 600;
-      font-size: 0.9rem;
-      line-height: 1.4;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      font-family: "Montserrat", sans-serif;
       cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .countdown:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
     }
 
     .countdown span {
-      display: block;
-      margin-top: 0.3rem;
-    }
-
-    hr {
-      border: 0;
-      height: 2px;
-      background-color: #000000;
-      margin: 2rem 0;
-    }
-
-    .premium-bottom {
-      text-align: center;
-      margin: 2rem 0;
-      font-weight: 500;
-    }
-
-    .premium-bottom a {
-      text-decoration: underline;
-      color: #000000;
       font-weight: 600;
     }
 
     @media (max-width: 768px) {
-      .top-bar .logo {
-        font-size: 2.4rem;
-        min-width: auto;
-      }
-      .top-bar .links {
-        font-size: 1rem;
-      }
       .container {
         padding: 1.2rem;
       }
+
       h1 {
         font-size: 1.6rem;
       }
-      p {
+
+      p, li {
         font-size: 0.95rem;
       }
+
       #soundBtn {
         width: 35px;
         height: 35px;
         font-size: 1rem;
       }
+
       .btn-large {
         font-size: 1.1rem;
         padding: 1rem 2rem;
@@ -264,14 +222,6 @@
   </style>
 </head>
 <body>
-  <div class="top-bar">
-    <a href="index.html" class="logo">100<span class="reversed">1</span> PROG</a>
-    <div class="links">
-      <a href="index.html" class="active">NORMAL</a>
-      <a href="premium.html">PREMIUM</a>
-    </div>
-  </div>
-
   <div class="container">
 
     <div class="video-section">
@@ -287,16 +237,13 @@
     </div>
 
     <div class="countdown-container">
-      <div id="countdownTop" class="countdown">
-        Fermeture des candidatures dans : <br>
-        <span>00j 00h 00m 00s</span>
-      </div>
+      <div id="countdownTop" class="countdown">Fermeture des candidatures dans : <span>00j 00h 00m 00s</span></div>
     </div>
 
     <h1>Ton corps n’évolue pas parce que tu n’as pas de plan.</h1>
     <p>Tu t’entraînes, tu te donnes, mais rien ne change vraiment. T’as déjà eu la sensation de bosser pour rien ? De douter de toi ? (alors que t’as juste pas la bonne structure) </p>
     <p><strong>1001prog</strong> met fin à ça.  
-    Je construis ton plan sur mesure, pour que chaque séance te rapproche vraiment de tes objectifs. Tu sauras quoi faire, pourquoi tu le fais, et comment progresser — sans te blesser ni stagner.</p>
+    Je construis ton plan sur mesure, pour que chaque séance te rapproche vraiment de tes objectifs. Tu sauras quoi faire, pourquoi tu le fais, et comment progresser — sans te blesser ni stagner.
     
     <p>Les chiffres parlent : avec un plan structuré et adapté tu as jusqu’à <strong>10 fois</strong> plus de chance d’atteindre ton objectif.</p>
 
@@ -312,31 +259,46 @@
       <li>Tu comprends comment t’entraîner intelligemment. T’es autonome à vie.</li>
     </ul>
 
-    <p><a href="premium.html">Option Premium :</a> un appel individuel (+1h) où je construis ton plan devant toi et t’explique tout ce qui compte pour progresser sans plateau.</p>
+    <p><strong>Option premium :</strong> on fait ton plan ensemble, en appel. Tu vois chaque choix en direct, et tu repars sans la moindre zone floue.</p>
 
-    <div class="premium-bottom">
-      <p>Tu en veux + ? <a href="premium.html">Voir l'offre Premium</a></p>
+    <div style="margin: 2rem 0;">
+      <hr style="border: 0; height: 2px; background-color: #000000; width: 100%;">
     </div>
 
-    <hr>
+    <h2>Concrètement, le programme inclut :</h2>
+    <ul>
+      <li>Ton programme 100% personnalisé.</li>
+      <li>3 vidéos clés : exécutions, application & mindset</li>
+      <li>L’accès à vie à <strong>1001Lab</strong> — ma communauté privée : conférences, events, promos, suivis exclusifs.</li>
+    </ul>
+
+    <p><strong>Option Premium :</strong> un appel individuel (+1h) où je construis ton plan devant toi et t’explique tout ce qui compte pour progresser sans plateau.</p>
+    
+    <div style="margin: 2rem 0;">
+      <hr style="border: 0; height: 2px; background-color: #000000; width: 100%;">
+    </div>
+    
 
     <h2>Pourquoi j’ai créé 1001prog :</h2>
     <p>J’ai passé des années à m’entraîner dans le flou. Je pensais que la discipline suffisait. Faux.  
     Ce qui change tout, <strong>c’est le plan.</strong>  
-    Quand j’ai enfin structuré le mien, ma progression <strong>a explosé</strong>. Aujourd’hui, je te fais gagner ce temps-là.</p>
-
-    <hr>
-
-    <h2>Résultats réels :</h2>
-
-    <div class="image-section">
-      <img src="temoignage de bz.jpeg" alt="Témoignage BZ">
+    Quand j’ai enfin structuré le mien, ma progression <strong>a explosé</strong> . Aujourd’hui, je te fais gagner ce temps-là.</p>
+    
+    
+    <div style="margin: 2rem 0;">
+      <hr style="border: 0; height: 2px; background-color: #000000; width: 100%;">
     </div>
 
-    <div class="image-section">
-      <img src="IMG_0157.jpeg" alt="Transformation physique">
-      <p><em>3 mois. Même personne, mais mental et physique différent.</em></p>
-    </div>
+   <h2>Résultats réels :</h2>
+
+<div class="image-section">
+  <img src="temoignage de bz.jpeg" alt="Témoignage BZ">
+</div>
+
+<div class="image-section">
+  <img src="IMG_0157.jpeg" alt="Transformation physique">
+  <p><em>3 mois. Même personne, mais mental et physique différent.</em></p>
+</div>
 
     <div class="testimonial">
       <strong>Liam :</strong>
@@ -364,14 +326,7 @@
     </div>
 
     <div class="countdown-container">
-      <div id="countdownBottom" class="countdown">
-        Fermeture des candidatures dans : <br>
-        <span>00j 00h 00m 00s</span>
-      </div>
-    </div>
-
-    <div class="premium-bottom">
-      <p>Tu en veux + ? <a href="premium.html">Voir l'offre Premium</a></p>
+      <div id="countdownBottom" class="countdown">Fermeture des candidatures dans : <span>00j 00h 00m 00s</span></div>
     </div>
 
   </div>
