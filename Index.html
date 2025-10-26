@@ -190,7 +190,7 @@
       margin: 0;
     }
 
-    /* Vidéo responsive avec arrondis */
+    /* Vidéo même taille que les images */
     .video-section {
       display: flex;
       justify-content: center;
@@ -199,9 +199,10 @@
 
     .video-wrapper {
       width: 100%;
-      max-width: 700px; /* largeur max */
-      border-radius: 16px; /* arrondis */
-      overflow: hidden;   /* applique l’arrondi à la vidéo */
+      max-width: 400px; /* identique aux images */
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
     .video-wrapper video {
