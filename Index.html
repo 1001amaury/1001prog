@@ -61,7 +61,6 @@
       opacity: 0.6;
     }
 
-    /* Soulignement actif */
     .top-bar .links a.active {
       text-decoration: underline;
       font-weight: 700;
@@ -126,7 +125,7 @@
       border-radius: 8px;
       text-decoration: none;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       transition: all 0.2s ease-in-out;
     }
 
@@ -154,7 +153,7 @@
       width: 100%;
       max-width: 400px;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -168,7 +167,7 @@
       border-radius: 10px;
       padding: 1rem;
       margin-top: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -236,7 +235,7 @@
       padding: 0.8rem 1.2rem;
       text-align: center;
       font-weight: 600;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       font-family: "Montserrat", sans-serif;
       cursor: pointer;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -247,7 +246,13 @@
       box-shadow: 0 6px 16px rgba(0,0,0,0.2);
     }
 
+    .countdown-text {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
     .countdown span {
+      display: block;
       font-weight: 600;
     }
 
@@ -304,7 +309,10 @@
     </div>
 
     <div class="countdown-container">
-      <div id="countdownTop" class="countdown">Fermeture des candidatures dans : <span>00j 00h 00m 00s</span></div>
+      <div id="countdownTop" class="countdown">
+        <span class="countdown-text">Fermeture des candidatures dans :</span>
+        <span>00j 00h 00m 00s</span>
+      </div>
     </div>
 
     <h1>Ton corps n’évolue pas parce que tu n’as pas de plan.</h1>
@@ -391,7 +399,10 @@
     </div>
 
     <div class="countdown-container">
-      <div id="countdownBottom" class="countdown">Fermeture des candidatures dans : <span>00j 00h 00m 00s</span></div>
+      <div id="countdownBottom" class="countdown">
+        <span class="countdown-text">Fermeture des candidatures dans :</span>
+        <span>00j 00h 00m 00s</span>
+      </div>
     </div>
 
   </div>
@@ -421,7 +432,7 @@
 
     // Fonction de countdown
     function startCountdown(id) {
-      const countdownElement = document.getElementById(id).querySelector('span');
+      const countdownElement = document.getElementById(id).querySelector('span:last-child');
       const targetDate = new Date("2025-11-09T23:59:59").getTime();
 
       function updateTimer() {
