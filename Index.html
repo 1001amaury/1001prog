@@ -61,6 +61,12 @@
       opacity: 0.6;
     }
 
+    /* Soulignement actif */
+    .top-bar .links a.active {
+      text-decoration: underline;
+      font-weight: 700;
+    }
+
     a.premium-link {
       text-decoration: underline;
       color: #000000;
@@ -106,7 +112,7 @@
 
     li:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
     }
 
     .btn {
@@ -278,7 +284,7 @@
   <div class="top-bar">
     <a href="index.html" class="logo">100<span class="reversed">1</span> PROG</a>
     <div class="links">
-      <a href="index.html">NORMAL</a>
+      <a href="index.html" class="active">NORMAL</a>
       <a href="premium.html">PREMIUM</a>
     </div>
   </div>
