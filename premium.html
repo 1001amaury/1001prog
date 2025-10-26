@@ -134,7 +134,7 @@
 
     .image-section img {
       width: 100%;
-      max-width: 500px;
+      max-width: 400px;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
@@ -157,6 +157,62 @@
       font-style: italic;
       font-weight: 500;
       margin: 0;
+    }
+
+    .video-section {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      margin-bottom: 2rem;
+    }
+
+    .video-section iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #soundBtn {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(0,0,0,0.6);
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .countdown-container {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .countdown {
+      display: inline-block;
+      background-color: #d9d9d9;
+      border-radius: 8px;
+      padding: 0.6rem 1rem;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      cursor: pointer;
+    }
+
+    .countdown span {
+      display: block;
+      margin-top: 0.3rem;
     }
 
     hr {
@@ -195,6 +251,11 @@
       p {
         font-size: 0.95rem;
       }
+      #soundBtn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+      }
       .btn-large {
         font-size: 1.1rem;
         padding: 1rem 2rem;
@@ -203,60 +264,174 @@
   </style>
 </head>
 <body>
-  <!-- Barre du haut -->
   <div class="top-bar">
     <a href="index.html" class="logo">100<span class="reversed">1</span> PROG</a>
     <div class="links">
-      <a href="index.html">NORMAL</a>
-      <a href="premium.html" class="active">PREMIUM</a>
+      <a href="index.html" class="active">NORMAL</a>
+      <a href="premium.html">PREMIUM</a>
     </div>
   </div>
 
-  <!-- Contenu -->
   <div class="container">
-    <h1>1001prog Premium</h1>
-    <p><strong>Ton programme. Ton plan. Ton déclic.</strong></p>
-    <p>Avec <strong>1001prog Premium</strong>, tu as tout : ton programme de sport 100% personnalisé, 3 vidéos clés pour l’exécution, l’application et le mindset… mais surtout, <strong>on construit ton plan ensemble</strong> en appel privé (+1h). Chaque exo, chaque choix : tu comprends tout, et tu repars avec une vision claire et un système qui marche.</p>
+
+    <div class="video-section">
+      <iframe 
+        id="ytVideo"
+        src="https://www.youtube.com/embed/uUwiqxAMxI4?autoplay=1&mute=1" 
+        title="YouTube video" 
+        frameborder="0" 
+        allow="autoplay; encrypted-media" 
+        allowfullscreen>
+      </iframe>
+      <button id="soundBtn">🔊</button>
+    </div>
+
+    <div class="countdown-container">
+      <div id="countdownTop" class="countdown">
+        Fermeture des candidatures dans : <br>
+        <span>00j 00h 00m 00s</span>
+      </div>
+    </div>
+
+    <h1>Ton corps n’évolue pas parce que tu n’as pas de plan.</h1>
+    <p>Tu t’entraînes, tu te donnes, mais rien ne change vraiment. T’as déjà eu la sensation de bosser pour rien ? De douter de toi ? (alors que t’as juste pas la bonne structure) </p>
+    <p><strong>1001prog</strong> met fin à ça.  
+    Je construis ton plan sur mesure, pour que chaque séance te rapproche vraiment de tes objectifs. Tu sauras quoi faire, pourquoi tu le fais, et comment progresser — sans te blesser ni stagner.</p>
     
+    <p>Les chiffres parlent : avec un plan structuré et adapté tu as jusqu’à <strong>10 fois</strong> plus de chance d’atteindre ton objectif.</p>
+
     <div class="button-container">
-      <a href="https://exeatan.gumroad.com/l/1001progpremium?wanted=true" class="btn btn-large">Je prends mon Premium — 59,99€</a>
+      <a href="https://exeatan.gumroad.com/l/1001prog?wanted=true" class="btn">Je veux mon plan</a>
     </div>
 
     <h2>Ce que tu obtiens :</h2>
     <ul>
-      <li><strong>Programme 100% sur-mesure :</strong> adapté à tes objectifs, évolutif avec des ajustements illimités.</li>
-      <li><strong>3 vidéos clés :</strong> exécution des bases, application du plan, mindset & discipline.</li>
-      <li><strong>Appel privé (+1h) :</strong> on construit ton plan ensemble, tu comprends chaque détail.</li>
-      <li><strong>Priorité & accès direct :</strong> ton projet reste en tête, tu échanges avec moi plus facilement en privé.</li>
-      <li><strong>Avantages Premium :</strong> réponses illimitées à tes questions + ressources exclusives pour accélérer tes résultats.</li>
+      <li>Fini les séances au hasard — chaque exo a un sens et une logique.</li>
+      <li>Quand la motivation disparaît, le système que je t'ai donné prend le relais.</li>
+      <li>Tu kiffes tes entraînements, ton corps répond enfin. Tu as enfin ces résultats</li>
+      <li>Tu comprends comment t’entraîner intelligemment. T’es autonome à vie.</li>
     </ul>
 
-    <div class="button-container">
-      <a href="https://exeatan.gumroad.com/l/1001progpremium?wanted=true" class="btn">Accéder au Premium</a>
+    <p><a href="premium.html">Option Premium :</a> un appel individuel (+1h) où je construis ton plan devant toi et t’explique tout ce qui compte pour progresser sans plateau.</p>
+
+    <div class="premium-bottom">
+      <p>Tu en veux + ? <a href="premium.html">Voir l'offre Premium</a></p>
     </div>
 
     <hr>
 
-    <h2>Témoignage : Liam</h2>
+    <h2>Pourquoi j’ai créé 1001prog :</h2>
+    <p>J’ai passé des années à m’entraîner dans le flou. Je pensais que la discipline suffisait. Faux.  
+    Ce qui change tout, <strong>c’est le plan.</strong>  
+    Quand j’ai enfin structuré le mien, ma progression <strong>a explosé</strong>. Aujourd’hui, je te fais gagner ce temps-là.</p>
+
+    <hr>
+
+    <h2>Résultats réels :</h2>
+
     <div class="image-section">
-      <img src="IMG_0157.jpeg" alt="Transformation physique de Liam">
-      <p><em>3 mois : d’un simple objectif à un 10 km sous 40 minutes.</em></p>
+      <img src="temoignage de bz.jpeg" alt="Témoignage BZ">
+    </div>
+
+    <div class="image-section">
+      <img src="IMG_0157.jpeg" alt="Transformation physique">
+      <p><em>3 mois. Même personne, mais mental et physique différent.</em></p>
     </div>
 
     <div class="testimonial">
       <strong>Liam :</strong>
-      <p>“Incroyable le programme ! Je sens que je vais souffrir sur le 10k mais avec un prog comme ça ça me semble atteignable, ça me booste de fou.  
-      Le prog est grave complet merci mec ! J’ai hâte de commencer.”</p>
+      <p>“En deux mois je suis passé d’un muscle up qui passe 1x/2 à des séries de 4.  
+      Ma ligne sur le handstand s’est améliorée direct. Maintenant je fais des mini HSPU.  
+      Franchement tu m’as épaté, j’en reprendrai un quand j’aurai fini mes objectifs.”</p>
     </div>
 
-    <!-- Bouton d'achat supplémentaire -->
+    <div class="testimonial">
+      <strong>Théo :</strong>
+      <p>“Programme super quali. Répond parfaitement à mes attentes, résultats rapides.  
+      Franchement, c’est carré du début à la fin.”</p>
+    </div>
+
+    <div class="testimonial">
+      <strong>Lucas :</strong>
+      <p>“Ce que j’ai préféré, c’est que tout est vraiment adapté à moi.  
+      Chaque séance avait du sens, j’ai progressé sans me poser de questions.  
+      Je recommande à 100 %.”</p>
+    </div>
+
     <div class="button-container">
-      <a href="https://exeatan.gumroad.com/l/1001progpremium?wanted=true" class="btn btn-large">Je prends mon Premium</a>
+      <p><strong>Le programme ferme bientôt.</strong><br>Tu peux continuer à improviser... ou enfin suivre un plan qui marche.</p>
+      <a href="https://exeatan.gumroad.com/l/1001prog?wanted=true" class="btn btn-large">Je prends mon programme</a>
+    </div>
+
+    <div class="countdown-container">
+      <div id="countdownBottom" class="countdown">
+        Fermeture des candidatures dans : <br>
+        <span>00j 00h 00m 00s</span>
+      </div>
     </div>
 
     <div class="premium-bottom">
-      <p>Tu hésites encore ? <a href="index.html">Voir l'offre Normal</a></p>
+      <p>Tu en veux + ? <a href="premium.html">Voir l'offre Premium</a></p>
     </div>
+
   </div>
+
+  <script>
+    const gumroadLink = "https://exeatan.gumroad.com/l/1001prog?wanted=true";
+
+    // Bouton son
+    const soundBtn = document.getElementById('soundBtn');
+    const iframe = document.getElementById('ytVideo');
+    let soundOn = false;
+    soundBtn.addEventListener('click', () => {
+      if (!soundOn) {
+        iframe.src = iframe.src.replace('mute=1','mute=0');
+        soundOn = true;
+        soundBtn.style.display = 'none';
+      }
+    });
+
+    // Countdown cliquables
+    document.getElementById('countdownTop').addEventListener('click', () => {
+      window.location.href = gumroadLink;
+    });
+    document.getElementById('countdownBottom').addEventListener('click', () => {
+      window.location.href = gumroadLink;
+    });
+
+    // Fonction de countdown
+    function startCountdown(id) {
+      const countdownElement = document.getElementById(id).querySelector('span');
+      const targetDate = new Date("2025-11-09T23:59:59").getTime();
+
+      function updateTimer() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance < 0) {
+          countdownElement.innerHTML = "00j 00h 00m 00s";
+          clearInterval(interval);
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        countdownElement.innerHTML = 
+          `${String(days).padStart(2,'0')}j ` +
+          `${String(hours).padStart(2,'0')}h ` +
+          `${String(minutes).padStart(2,'0')}m ` +
+          `${String(seconds).padStart(2,'0')}s`;
+      }
+
+      updateTimer();
+      const interval = setInterval(updateTimer, 1000);
+    }
+
+    startCountdown('countdownTop');
+    startCountdown('countdownBottom');
+  </script>
 </body>
 </html>
