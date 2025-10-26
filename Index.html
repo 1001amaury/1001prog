@@ -30,10 +30,12 @@
     .top-bar .logo {
       font-weight: 800;
       font-size: 3rem;
-      margin-bottom: 0.25rem; /* petit espace contrôlé */
+      margin-bottom: 0.25rem;
       display: inline-block;
       min-width: 300px;
       line-height: 1;
+      text-decoration: none;
+      color: #000000;
     }
 
     .reversed {
@@ -54,7 +56,8 @@
       transition: opacity 0.2s ease;
     }
 
-    .top-bar .links a:hover {
+    .top-bar .links a:hover,
+    .top-bar .logo:hover {
       opacity: 0.6;
     }
 
@@ -267,7 +270,7 @@
 </head>
 <body>
   <div class="top-bar">
-    <div class="logo">100<span class="reversed">1</span> PROG</div>
+    <a href="index.html" class="logo">100<span class="reversed">1</span> PROG</a>
     <div class="links">
       <a href="index.html">NORMAL</a>
       <a href="premium.html">PREMIUM</a>
