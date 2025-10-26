@@ -190,24 +190,24 @@
       margin: 0;
     }
 
-    /* Vidéo responsive */
+    /* Vidéo responsive avec arrondis */
     .video-section {
       display: flex;
       justify-content: center;
       margin: 1.5rem auto;
-      max-width: 900px;
     }
 
     .video-wrapper {
-      position: relative;
       width: 100%;
+      max-width: 700px; /* largeur max */
+      border-radius: 16px; /* arrondis */
+      overflow: hidden;   /* applique l’arrondi à la vidéo */
     }
 
     .video-wrapper video {
       width: 100%;
       height: auto;
-      border-radius: 12px;
-      max-height: 80vh;
+      display: block;
     }
 
     .countdown-container {
