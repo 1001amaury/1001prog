@@ -166,18 +166,21 @@
       margin: 2rem 0;
     }
 
-    /* Comparateur */
+    /* Comparateur scrollable */
+    .compare-scroll {
+      overflow-x: auto;
+      padding-bottom: 1rem;
+    }
+
     .compare-container {
       display: flex;
-      justify-content: center;
-      margin: 2rem 0;
-      gap: 1rem;
+      gap: 1.5rem;
+      min-width: 820px; /* largeur minimale pour forcer le scroll */
     }
 
     .offer {
       flex: 1;
-      min-width: 0;
-      max-width: 400px;
+      min-width: 380px;
       background: #ffffff;
       border: 1px solid #e0e0e0;
       border-radius: 12px;
@@ -212,6 +215,7 @@
     .offer ul li {
       margin: 0.6rem 0;
       font-size: 1rem;
+      font-weight: 600;
     }
 
     .offer .button-container {
@@ -221,25 +225,6 @@
     .offer.premium {
       border: 2px solid #000000;
       box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-    }
-
-    @media (max-width: 768px) {
-      .compare-container {
-        flex-wrap: nowrap;
-      }
-      .offer {
-        width: 50%;
-        padding: 1rem 0.5rem;
-      }
-      .offer h3 {
-        font-size: 1.2rem;
-      }
-      .offer .price {
-        font-size: 1.1rem;
-      }
-      .offer ul li {
-        font-size: 0.85rem;
-      }
     }
   </style>
 </head>
@@ -293,47 +278,49 @@
     <hr>
 
     <h2>Comparer les offres</h2>
-    <div class="compare-container">
-      <div class="offer normal">
-        <h3>Normal</h3>
-        <p class="price">29,99 €</p>
-        <ul>
-          <li>✅ Programme 100% personnalisé</li>
-          <li>✅ 3 vidéos clés (exécution, application, mindset)</li>
-          <li>✅ Accès à vie à <strong>1001Lab</strong></li>
-          <li>❌ Pas d’appel privé (+1h) pour construire ton plan</li>
-          <li>❌ Pas de priorité ni d’accès direct en privé</li>
-          <li>❌ Pas de modifications illimitées</li>
-          <li>❌ Pas de réponses illimitées à tes questions</li>
-          <li>❌ Pas de ressources exclusives Premium</li>
-        </ul>
-        <div class="button-container">
-          <a href="https://exeatan.gumroad.com/l/1001prog?wanted=true" class="btn">Choisir Normal</a>
+    <div class="compare-scroll">
+      <div class="compare-container">
+        <div class="offer normal">
+          <h3>Normal</h3>
+          <p class="price">29,99 €</p>
+          <ul>
+            <li>✅ Programme 100% personnalisé</li>
+            <li>✅ 3 vidéos clés (exécution, application, mindset)</li>
+            <li>✅ Accès à vie à <strong>1001Lab</strong></li>
+            <li><span style="color:red;">❌ Pas d’appel privé (+1h)</span></li>
+            <li><span style="color:red;">❌ Pas de priorité / accès direct</span></li>
+            <li><span style="color:red;">❌ Pas de modifications illimitées</span></li>
+            <li><span style="color:red;">❌ Pas de réponses illimitées</span></li>
+            <li><span style="color:red;">❌ Pas de ressources exclusives</span></li>
+          </ul>
+          <div class="button-container">
+            <a href="https://exeatan.gumroad.com/l/1001prog?wanted=true" class="btn">Choisir Normal</a>
+          </div>
         </div>
-      </div>
 
-      <div class="offer premium">
-        <h3>Premium</h3>
-        <p class="price">59,99 €</p>
-        <ul>
-          <li>✅ Programme 100% personnalisé</li>
-          <li>✅ 3 vidéos clés (exécution, application, mindset)</li>
-          <li>✅ Accès à vie à <strong>1001Lab</strong></li>
-          <li>✅ Appel privé (+1h) pour construire ton plan</li>
-          <li>✅ Priorité & accès direct en privé</li>
-          <li>✅ Modifications illimitées</li>
-          <li>✅ Réponses illimitées à tes questions</li>
-          <li>✅ Ressources exclusives Premium</li>
-        </ul>
-        <div class="button-container">
-          <a href="https://exeatan.gumroad.com/l/1001progpremium?wanted=true" class="btn btn-large">Choisir Premium</a>
+        <div class="offer premium">
+          <h3>Premium</h3>
+          <p class="price">59,99 €</p>
+          <ul>
+            <li>✅ Programme 100% personnalisé</li>
+            <li>✅ 3 vidéos clés (exécution, application, mindset)</li>
+            <li>✅ Accès à vie à <strong>1001Lab</strong></li>
+            <li>✅ Appel privé (+1h) pour construire ton plan</li>
+            <li>✅ Priorité & accès direct en privé</li>
+            <li>✅ Modifications illimitées</li>
+            <li>✅ Réponses illimitées à tes questions</li>
+            <li>✅ Ressources exclusives Premium</li>
+          </ul>
+          <div class="button-container">
+            <a href="https://exeatan.gumroad.com/l/1001progpremium?wanted=true" class="btn btn-large">Choisir Premium</a>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Bouton final CTA -->
     <div class="button-container">
-      <a href="https://exeatan.gumroad.com/l/1001progpremium?wanted=true" class="btn btn-large">Je prends mon Premium</a>
+      <a href="https://exeatan.gumroad.com/l/1001progpremium?wanted=true" class="btn btn-large">Je veux passer au Premium maintenant</a>
     </div>
   </div>
 </body>
